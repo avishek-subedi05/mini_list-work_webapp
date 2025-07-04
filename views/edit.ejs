@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <div class="main w-full min-h-screen bg-zinc-900 text-white">
+
+        <div class="form p-10">
+            <form action="/edit/<%= filename %>" method="POST">
+
+                <input class="block px-3 py-5 bg-zinc-700 w-full rounded-lg outline-none" type="text"
+                    placeholder="Title" name="previous" value="<%= filename %>">
+                    
+                <input class="block px-3 py-5 bg-zinc-700 w-full rounded-lg outline-none mt-2" type="text"
+                    placeholder="New Title" name="new" value="">
+
+                <textarea class="block px-3 py-5 bg-zinc-700 resize-none mt-2 w-full rounded-lg outline-none"
+                    placeholder="Enter Details" id="" name="details"><%= filedata %></textarea>
+
+                <input type="submit" class="mt-2 bg-blue-600 py-5 px-3  rounded-md" value="Update task ">
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
